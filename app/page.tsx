@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -162,9 +163,11 @@ export default function NativeVoiceLanding(): React.ReactElement {
               NativeVoice
             </span>
           </div>
-          <Button className="bg-blue-500 hover:bg-blue-600 text-white">
-            Sign In
-          </Button>
+          <Link href="/apps/nativevoice/login">
+            <Button className="bg-blue-500 hover:bg-blue-600 text-white">
+              Sign In
+            </Button>
+          </Link>
         </div>
       </nav>
 
@@ -187,13 +190,15 @@ export default function NativeVoiceLanding(): React.ReactElement {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-            <Button
-              size="lg"
-              className="bg-blue-500 hover:bg-blue-600 text-white text-lg px-8"
-            >
-              Try Free
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Button>
+            <Link href="/apps/nativevoice/register">
+              <Button
+                size="lg"
+                className="bg-blue-500 hover:bg-blue-600 text-white text-lg px-8"
+              >
+                Try Free
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </Link>
             <Button
               size="lg"
               variant="outline"
@@ -316,9 +321,11 @@ export default function NativeVoiceLanding(): React.ReactElement {
             <p className="text-lg mb-4">
               Start improving your professional English today
             </p>
-            <Button className="bg-blue-500 hover:bg-blue-600 text-white">
-              Get Started Free
-            </Button>
+            <Link href="/apps/nativevoice/register">
+              <Button className="bg-blue-500 hover:bg-blue-600 text-white">
+                Get Started Free
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
